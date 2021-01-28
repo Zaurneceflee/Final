@@ -1,0 +1,435 @@
+@import "../sass/core.scss";
+
+
+
+body{
+    .container{
+        @include mobile{
+            margin: 0 auto;
+        }
+    }
+    nav{
+        @import "./nav-style.scss";
+    }
+    main{
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          
+        [class*="col-"] {
+            float: left;
+        }
+        
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+    
+        .about-header{
+            background-color: rgba(242, 242, 242, 0.65);
+            padding: 80px 160px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .first{
+                margin: 82px 0;
+                p{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 48px;
+                    line-height: 68px;
+                    color: #30444E;
+                    text-align: left;
+                    @include mobile{
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        text-align: center;
+                        font-size: 32px;
+                        line-height: 43px;
+                    }
+                }
+                @include mobile{
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    width: 100%;
+                }
+            }
+            .second{
+                padding: 93px 0;
+                img{
+                    width: 419px;
+                    height: 182px;
+                    @include mobile{
+                        width: 235px;
+                        height: 103px;
+                    }
+                }
+                @include mobile{
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    width: 100%;
+                }
+            }
+            @include mobile{
+                margin: 0;
+                padding: 28px 32px;
+                width: 100%;
+            }
+    
+        }
+        .about-text{
+            padding: 80px 160px;
+              h2{
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 45px;
+                color: $clr-dark;
+                &::after{
+                    //underline - zigzag
+                    content: url(/img/zig-line.svg);
+                    display: block;
+                    margin-top: -10px;
+                }
+                
+                @include mobile{
+                    margin: 0;
+                    padding: 20px 0;
+                    width: 100%;
+                }
+            }
+            
+            p{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: justify;
+                padding: 58px 0;
+                
+                color: $clr-dark;
+                strong{
+                    color: $clr-red;
+                }
+                @include mobile{
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    width: 100%;
+                }
+              }
+              @include mobile{
+                margin: 0;
+                padding: 28px 32px;
+                width: 100%;
+            }
+        }
+        .about-future{
+            background-color: rgba(242, 242, 242, 0.65);
+            padding: 80px 160px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: .3fr 1fr;
+    
+            h3{
+                padding-left: 50px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 57px;
+                letter-spacing: 0.2px;
+                text-transform: capitalize;
+                color: #263238;
+                cursor: context-menu;
+                &::after{
+                    //underline - zigzag
+                    content: url(/img/zig-line.svg);
+                    display: block;
+                    margin-top: -25px;
+                }
+                @include mobile{
+                    grid-column: 1/3;
+                    grid-row: 1/2;  
+                    padding: 20px 0;         
+                }
+            }
+            .video{
+                grid-column: 1/2;
+                grid-row: 1/3;
+                iframe{
+                    width: 100%;
+                    height: 442px;
+                    @include mobile{
+                        height: 256px;
+                    }
+                }
+    
+            }
+            .content{
+                padding-left: 50px;
+                img{
+                    margin-right: 20px;
+    
+                }
+                strong{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    color: #263238;
+                    display: block;
+                    margin-bottom: 16px;
+                }
+                p{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: 0.2px;
+                    color: #263238;
+                }
+                @include mobile{
+                    padding: 34px 0;
+                }
+    
+    
+            }
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 28px 32px;
+                width: 100%;
+    
+                .col-6{
+                    margin: 0;
+                    width: 100%;
+                    padding-left: 0;
+                }
+                
+            }
+    
+        }
+        .about-culture{
+            background-color: #EE4248;
+            padding: 80px 160px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+            .content{
+                grid-column: 1/2;
+                p{
+                    padding-right: 100px;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-align: justify;
+                    color: #FFFFFF;
+                    @include mobile{
+                        margin: 0;
+                        width: 100%;
+                    }
+                }
+                h4{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 32px;
+                    line-height: 45px;
+                    color: #FFFFFF;
+                    &::after{
+                        //underline - zigzag
+                        content: url(/img/zig-line-black.svg);
+                        display: block;
+                        margin-top: -10px;
+    
+                    }
+                    @include mobile{
+                        padding: 0;
+                        width: 100%;
+                    }        
+        
+                    
+                }
+                @include mobile{
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+            .video{
+                grid-column: 2/3;
+                grid-row: 1/3;
+                iframe{
+                    width: 100%;
+                    height: 442px;
+                    @include mobile{
+                        height: 256px;
+                        width: 347px;
+                        margin-top: 3rem;
+                    }
+                }
+                
+    
+            }
+            @include mobile{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 28px 32px;
+                width: 100%;
+            }
+    
+        }
+        .address-title{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 45px;
+            color: #263238;
+            text-align: center;
+            padding: 50px 0;
+            &::after{
+                //underline - zigzag
+                content: url(/img/zig-line.svg);
+                display: block;
+                margin-top: -10px;
+            }
+            @include mobile{
+                padding: 34px 0;
+            }
+    
+        }
+        .address-map{
+            padding: 80px 160px;
+    
+            iframe{
+                width: 100%;
+                height: 442px;
+                @include mobile{
+                    height: 256px;
+                    width: 347px;
+                }
+            }
+            .c-card{
+                img{
+                    margin: 26px;
+                    margin-left: 64px;
+                }
+                strong{
+                    display: block;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 46px;
+                    color: #1F2E35;
+                }
+                p{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #30444E;
+        
+                }
+                @include mobile{
+                    padding: 20px 0;
+                }
+            }
+            @include mobile{
+                .col-6{
+                    width: 100%;
+                }
+                margin: 0;
+                padding: 28px 32px;
+                width: 100%;
+            }
+    
+        }
+        .contact{
+            padding: 80px 160px;
+            .first{
+                img{
+                    height: 56px;
+                    width: 119px;
+                }
+                strong{
+                    display: block;
+                    padding: 16px 0;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #263238;
+                }
+                address{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #263238;
+                }
+            }
+            .second{
+                strong{
+                    display: block;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: #263238;
+                    padding: 25px 0;
+                }
+                address{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #263238;
+                }
+            }
+            .third{
+                padding-top: 50px;
+                div{
+                    display: flex;
+                }
+            }
+            @include mobile{
+    
+                .col-4{
+                    width: 100%;
+                }
+                margin: 0;
+                padding: 28px 32px;
+                width: 100%;
+            }
+        }
+        .footer{
+            margin-bottom: -19px;
+            p{
+                background-color: $clr-red;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+                padding: 22px 0;
+                text-align: center;
+            }
+            @include mobile{
+                margin-bottom: -20px;
+            }
+        }
+    
+    }
+}
